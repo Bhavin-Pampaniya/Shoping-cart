@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <title>shoping cart</title>
+    <style>
+      button{
+        cursor: pointer;
+      }
+      .cart_section .sec_1 {
+        width: 50%;
+        display: flex;
+        /* gap: 10rem; */
+        justify-content: space-between;
+      }
+      ul {
+        list-style: none;
+        padding-left: 0.5rem;
+      }
+      li {
+        list-style: none;
+      }
+      .sec_2 {
+        width: 49%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .sec_3 {
+        display: flex;
+        flex-direction: column;
+      }
+      .sec_3 form div {
+        margin: 1rem 0;
+      }
+      .product_summary {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 1rem;
+      }
+      .subSec1 {
+        width: 30%;
+      }
+      .subSec2 {
+        width: 50%;
+      }
+      .sec_4 {
+        width: 90%;
+      }
+      .itemSummary {
+        display: flex;
+        gap: 1rem;
+      }
+      .itemSummary p {
+        margin: 0 0.5rem;
+      }
+      .sec_5{
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="heading">
+        <h1>Welcome to my website</h1>
+      </div>
+    </nav>
+    <main>
+      <div class="item-menu">
+        <label for="item">Choose a item you want to purchase:</label>
+        <select name="item" id="items">
+          <option value="mobile">Mobile 15k</option>
+          <option value="tv">Tv 10k</option>
+          <option value="sneaker" selected>Sneaker 7k</option>
+          <option value="tshirt">T-Shirt Rs.500</option>
+          <option value="jean">Jean Rs.800</option>
+          <option value="hoodie">Hoodie 1k</option>
+        </select>
+      </div>
+      <div class="quantity-menu">
+        <form action="">
+          <label for="quantity">Choose quantity for the item:</label>
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            min="1"
+            max="10"
+            value="1"
+          />
+          <button type="submit" id="cart_btn">Add to cart</button>
+        </form>
+      </div>
+    </main>
+    <div class="cart_section">
+      <div class="sec_1">
+        <div class="items">
+          <h2>Items</h2>
+          <div class="items_name_list"></div>
+        </div>
+        <div class="itemsQuantity">
+          <h2>Quantities</h2>
+          <div class="items_quantity_list"></div>
+        </div>
+        <div class="itemsPrice">
+          <h2>Prices</h2>
+          <div class="items_price_list"></div>
+        </div>
+      </div>
+      <div class="sec_2">
+        <h2>Total amount</h2>
+        <h2 class="grandTotal"></h2>
+      </div>
+    </div>
+    <div class="sec_3">
+      <form action="">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" minlength="3" required />
+        </div>
+        <div>
+          <label for="name">Phone Number</label>
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            minlength="10"
+            maxlength="10"
+            required
+          />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" min="5" required />
+        </div>
+        <div>
+          <label for="address">Address</label>
+          <textarea
+            name="address"
+            id="address"
+            cols="30"
+            rows="5"
+            minlength="10"
+            required
+          ></textarea>
+        </div>
+        <div>
+          <button type="submit" class="checkOut" disabled>Check Out</button>
+        </div>
+      </form>
+    </div>
+    <div class="sec_4">
+      <h2>order summary</h2>
+      <div class="product_summary">
+        <div class="subSec1"></div>
+        <div class="subSec2"></div>
+        <div>
+          <h3>Total Amount</h3>
+          <h4 class="totalSummary"></h4>
+        </div>
+      </div>
+    </div>
+    <div class="sec_5">
+      <div class="part1">
+
+        <button class="first">First</button>
+        <button class="prev">Prev</button>
+        <button class="next">Next</button>
+        <button class="last">Last</button>
+      </div>
+      <div class="part2">
+        <input type="number" class="gotoInput" min="1" value="1">
+        <button class="goto">GOTO</button>
+      </div>
+    </div>
+  </body>
+</html>
